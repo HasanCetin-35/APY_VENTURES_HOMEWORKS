@@ -1,0 +1,38 @@
+/* Add your styles here */
+div#kutuKapsa{
+  width:130px;
+  height: 130px;
+  border: 4px double rgb(230, 220, 26);
+  margin: auto;
+  display: flex;
+  text-align: center;
+  
+  flex-wrap: wrap-reverse;
+ 
+ 
+}
+body{
+  background-color: rgb(94, 91, 227);
+  margin-left: 500px;
+}
+h1{
+  margin-left: 120px;
+}
+td{
+  color: rgb(96, 7, 17);
+  background-color: yellow;
+  margin: auto;
+}
+
+div.kutu1{
+  width: 40px;
+  height: 40px;
+  background-color: rgb(39, 194, 197);
+  color: rgb(21, 16, 16);
+  margin: auto;
+  margin-left: 1px;
+  margin-bottom: 1px;
+  
+  
+}
+

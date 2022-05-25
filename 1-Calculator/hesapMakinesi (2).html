@@ -1,0 +1,89 @@
+<html>
+<head>
+    <!--ÖDEVİ YAPARKEN İNTERNET SİTELERİNDEN BAKARAK YAPMAM GEREKTİ ÇÜNKÜ
+    BUGÜN CUMARTESİ VE BENİM DAHA İZLEMEM GEREKEN 2 HAFTA VAR ONLARIN ÖDEVİ DE VAR 
+    AMA ÖDEVİ ANLAYARAK YAPTIM O YÖNDEN İÇİM RAHAT TEŞEKKÜRLER.-->
+	<script>
+		function ekran(val)
+		{
+			document.getElementById("result").value+=val
+		}
+		
+		
+		function cözüm()
+		{
+			let x = document.getElementById("result").value
+			let y = eval(x)
+			document.getElementById("result").value = y
+		}
+		
+		function temizle()
+		{
+			document.getElementById("result").value = ""
+		}
+	</script>
+    <!--.title diyerek başlık olarak girdimizin çerçevesini ayarladık.-->
+	<style>
+        
+		.title{
+		margin-bottom: 20px;
+		text-align:center;
+		width: 230px;
+		color:green;
+		border: solid rgb(242, 0, 89) 2px;
+		}
+        
+		input[type="button"]
+		{
+        text-align:center;
+		background-color:rgb(22, 108, 177);
+		color: rgb(127, 189, 120);
+		border: solid rgb(208, 208, 30) 1px;
+		width:100%
+		}
+
+		input[type="text"]
+		{
+        text-align:center;
+		background-color:rgba(73, 203, 86, 0.622);
+		border: solid rgb(28, 135, 168) 10px;
+		width:100%
+		}
+	</style>
+</head>
+<body>
+	<div class = title >Hesap Makinesi</div><!--Başlığımızı attık otomatik olarak ortaladı çerçeve içerisine -->
+	<table border="6"><!--çerçeve kalınlığını belirginleştirdi.-->
+		<tr>
+			<td colspan="3"><input type="text" id="result"/></td><!--colspan text in uzunluğunu belirtiyor  -->
+			<td><input type="button" value="c" onclick="temizle()"/> </td><!--C ye basıldığında temizle fonksiyonuna gitmesini sağlıyor.-->
+		</tr>
+		<tr>
+			<!--Şimdi her bir satırda olması gereken ifadeleri yerleştiriyoruz-->
+            <!--inputumun işlevi buton ,değeri 1 ve onclick ile üstüne batığımda ekrana yazılacak olan değer de 1 olduğunu koda yazdık.-->
+			<td><input type="button" value="1" onclick="ekran('1')"/> </td>
+			<td><input type="button" value="2" onclick="ekran('2')"/> </td>
+			<td><input type="button" value="3" onclick="ekran('3')"/> </td>
+			<td><input type="button" value="/" onclick="ekran('/')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="4" onclick="ekran('4')"/> </td>
+			<td><input type="button" value="5" onclick="ekran('5')"/> </td>
+			<td><input type="button" value="6" onclick="ekran('6')"/> </td>
+			<td><input type="button" value="-" onclick="ekran('-')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="7" onclick="ekran('7')"/> </td>
+			<td><input type="button" value="8" onclick="ekran('8')"/> </td>
+			<td><input type="button" value="9" onclick="ekran('9')"/> </td>
+			<td><input type="button" value="+" onclick="ekran('+')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="." onclick="ekran('.')"/> </td>
+			<td><input type="button" value="0" onclick="ekran('0')"/> </td>
+			<td><input type="button" value="=" onclick="cözüm()"/> </td>
+			<td><input type="button" value="*" onclick="ekran('*')"/> </td>
+		</tr>
+	</table>
+</body>
+</html>
